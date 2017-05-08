@@ -1,0 +1,489 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: #548878;
+    overflow: hidden;
+}
+
+/*canvas背景*/
+.bg{
+    position: absolute;
+    z-index: -1;
+}
+
+/*ipad外壳*/
+.ipad{
+    margin:20px auto 0;
+    padding:38px 0 0 83px;
+    width: 950px;
+    height:600px;
+    background: url(../img/ipad.png) no-repeat;
+    background-size:100% 100%;
+}
+
+/*屏幕区*/
+.screen{
+    overflow: hidden;
+    position: relative;
+    width:782px;
+    height:528px;
+    border-radius: 5px;
+    background: url(../img/background.jpg);
+    background-size:100% 100%;
+}
+
+/*canvas区*/
+#drawBoard{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+/*初始化区*/
+.start{
+    font:14px/20px "";
+    padding:6px;
+    color: #fff;
+}
+
+/*文字区*/
+.mask{
+    position: absolute;
+    top: -180px;
+    width:100%;
+    height:180px;
+    background: url(../img/home-mask.png) no-repeat;
+    background-size:100% 100%;
+    border-radius: 10px 10px 0 0 ;
+}
+.logo{
+    position: absolute;
+    left: -288px;
+    width:288px;
+    height: 135px;
+    background: url(../img/logo.png);
+}
+.ninja{
+    position: absolute;
+    top: -100px;
+    left: 440px;
+    width:244px;
+    height: 81px;
+    background: url(../img/ninja.png);
+}
+.desc{
+    position: absolute;
+    left: -160px;
+    top:140px;
+    width:161px;
+    height: 91px;
+    background: url(../img/home-desc.png);
+}
+
+/*游戏区*/
+.game-area{
+    position: relative;
+}
+.score-area{
+    /*padding:0 10px;*/
+    color: #ffaa23;
+    position: absolute;
+    top:10px;
+    left:-75px;
+    /*left:10px;*/
+}
+.get-score-pic{
+    float: left;
+    width: 29px;
+    height: 31px;
+    background: url("../img/score.png");
+    margin-right:10px;
+}
+.get-score-num{
+    font:26px/32px "";
+}
+.best-score{
+    font:14px/20px "";
+}
+.lost-area{
+    position: absolute;
+    top:10px;
+    right:-100px;
+    /*right:10px;*/
+}
+.lost-area span:nth-child(1){
+    float: left;
+    width:22px;
+    height:19px;
+    background: url("../img/x.png");
+}
+.lost-area span:nth-child(2){
+    float: left;
+    width:27px;
+    height:26px;
+    background: url("../img/xx.png");
+    margin:0 2px 0;
+}
+.lost-area span:nth-child(3){
+    float: left;
+    width:32px;
+    height:32px;
+    background: url("../img/xxx.png");
+}
+.countdown{
+    position: absolute;
+    top:10px;
+    right:-70px;
+    width:60px;
+    height: 40px;
+    color: #ffaa23;
+    text-align: center;
+    font:30px/40px "";
+}
+/*功能区*/
+.func-area{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height:400px;
+}
+/*退出*/
+.quit{
+    position: absolute;
+    bottom: 30px;
+    left: 594px;
+    width:140px;
+    height: 140px;
+    transform: scale(0);
+}
+.quit-cricle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: url(../img/quit.png);
+}
+.quit-bomb{
+    position: absolute;
+    top:20px;
+    left: 20px;
+    width:80px;
+    height: 80px;
+    transform-origin: 50px 50px;
+    background: url(../img/boom.png) no-repeat;
+}
+/*经典模式*/
+.classic-mode{
+    position: absolute;
+    top:10px;
+    left: 564px;
+    width: 190px;
+    height:190px;
+    transform: scale(0);
+}
+.classic-mode-cricle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: url(../img/classicmode.png);
+    background-size:100% 100%;
+}
+.classic-mode-fruit{
+    position: absolute;
+    top:45px;
+    left: 45px;
+    width:100px;
+    height: 100px;
+    background: url(../img/fruit/sandia.png) no-repeat;
+    background-size:100% 100%;
+}
+/*街机模式*/
+.arcade-mode{
+    position: absolute;
+    top:50px;
+    left: 404px;
+    width: 150px;
+    height:150px;
+    transform: scale(0);
+}
+.arcade-mode-cricle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: url(../img/arcademode.png);
+    background-size:100% 100%;
+}
+.arcade-mode-fruit{
+    position: absolute;
+    top:45px;
+    left: 45px;
+    width:60px;
+    height: 60px;
+    background: url(../img/fruit/basaha.png) no-repeat;
+    background-size:100% 100%;
+}
+/*限时模式*/
+.time-mode{
+    position: absolute;
+    top:210px;
+    left: 394px;
+    width: 170px;
+    height:170px;
+    transform: scale(0);
+}
+.time-mode-cricle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: url(../img/timemode.png);
+    background-size:100% 100%;
+}
+.time-mode-fruit{
+    position: absolute;
+    top:45px;
+    left: 45px;
+    width:80px;
+    height: 80px;
+    background: url(../img/fruit/peach.png) no-repeat;
+    background-size:100% 100%;
+}
+/*计分区*/
+.scoreboard{
+    position: absolute;
+    left:-300px;
+    top:100px;
+    line-height:50px;
+    font-size:20px;
+    color: #fff;
+}
+.scoreboard p{
+    padding-left:20px;
+}
+
+/*水果容器*/
+.fruit-content{
+    z-index: 7;
+    position: absolute;
+    left: 0;
+    top:0;
+    width:100%;
+    height:100%;
+    position: relative;
+}
+
+/*掉落时出现的叉叉*/
+.lostx{
+    position: absolute;
+    top: 470px;
+    width:54px;
+    height: 50px;
+    background: url(../img/lose.png);
+}
+
+/*其他容器*/
+.other-content{
+    z-index: 5;
+    width:100%;
+    height:100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size:100% 100%!important;
+}
+/*白色遮罩层*/
+.cover{
+    width:100%;
+    height:100%;
+    position: absolute;
+    background: #fff;
+    transition: opacity 2s;
+}
+/*game over*/
+.game-over-pic{
+    position: absolute;
+    left:0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto auto;
+    transform: scale(0);
+    transition:1s;
+}
+
+/*刀光*/
+.light{
+    width: 360px;
+    height:20px;
+    background: url("../img/flash.png");
+    background-size:100% 100%;
+    position: absolute;
+}
+
+/*文字*/
+.txt{
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: 0.5s;
+    transform: scale(0);
+    width:80px;
+    height:35px;
+    background: url(../img/double.png);
+    background-size:100% 100%!important;
+}
+
+/*水果碎片*/
+.cut{
+    z-index: 2;
+    position: absolute;
+    background-size:100% 100%;
+    left: 0;
+    top: 0;
+}
+
+/*各个水果样式*/
+.bomb{
+    position: absolute;
+    width:80px;
+    height:80px;
+    background: url(../img/fruit/boom.png);
+    background-size:100% 100%;
+}
+.bomb-10{
+    position: absolute;
+    width:80px;
+    height:80px;
+    background: url(../img/fruit/bomb-10.png);
+    background-size:100% 100%;
+}
+.pome-ice{
+    position: absolute;
+    width:100px;
+    height:100px;
+    background: url(../img/fruit/pome-ice.png);
+    background-size:100% 100%;
+}
+.pome-hot{
+    position: absolute;
+    width:100px;
+    height:100px;
+    background: url(../img/fruit/pome-hot.png);
+    background-size:100% 100%;
+}
+.pome-double{
+    position: absolute;
+    width:100px;
+    height:100px;
+    background: url(../img/fruit/pome-double.png);
+    background-size:100% 100%;
+}
+.sandia{
+    position: absolute;
+    width:100px;
+    height:100px;
+    background: url(../img/fruit/sandia.png);
+    background-size:100% 100%;
+}
+.basaha{
+    position: absolute;
+    width:60px;
+    height:60px;
+    background: url(../img/fruit/basaha.png);
+    background-size:100% 100%;
+}
+.apple{
+    position: absolute;
+    width:60px;
+    height:60px;
+    background: url(../img/fruit/apple.png);
+    background-size:100% 100%;
+}
+.peach{
+    position: absolute;
+    width:60px;
+    height:60px;
+    background: url(../img/fruit/peach.png);
+    background-size:100% 100%;
+}
+.coconut{
+    position: absolute;
+    width:80px;
+    height:80px;
+    background: url(../img/fruit/coconut.png);
+    background-size:100% 100%;
+}
+.green{
+    position: absolute;
+    width:60px;
+    height:60px;
+    background: url(../img/fruit/green.png);
+    background-size:100% 100%;
+}
+.kiwi{
+    position: absolute;
+    width:60px;
+    height:60px;
+    background: url(../img/fruit/kiwi.png);
+    background-size:100% 100%;
+}
+.lemon{
+    position: absolute;
+    width:60px;
+    height:60px;
+    background: url(../img/fruit/lemon.png);
+    background-size:100% 100%;
+}
+.orange{
+    position: absolute;
+    width:60px;
+    height:60px;
+    background: url(../img/fruit/orange.png);
+    background-size:100% 100%;
+}
+.pear{
+    position: absolute;
+    width:80px;
+    height:80px;
+    background: url(../img/fruit/pear.png);
+    background-size:100% 100%;
+}
+.rapple{
+    position: absolute;
+    width:80px;
+    height:80px;
+    background: url(../img/fruit/rapple.png);
+    background-size:100% 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

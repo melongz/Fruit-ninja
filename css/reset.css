@@ -1,0 +1,48 @@
+body{
+    background: #fff;
+}
+body,h1,h2,h3,h4,h5,h6{
+    line-height:1;
+    font-family:"微软雅黑";
+}
+body,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+input,button,textarea,form,label,select,option{
+    outline: none;
+    border:none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+ol,ul{
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,strong,b{
+    font-weight: normal;
+}
+em,i{
+    font-style: normal;
+}
+img{
+    display: block;
+    border:none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+.clearfix{
+    zoom: 1;
+}

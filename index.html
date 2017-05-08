@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="favicon.ico" rel="icon">
+</head>
+<body>
+<canvas class="bg"></canvas>
+<div class="ipad">
+    <div class="screen">
+        <!--文字区-->
+        <div class="mask">
+            <div class="logo"></div>
+            <div class="ninja"></div>
+            <div class="desc"></div>
+        </div>
+        <!--游戏区-->
+        <div class="game-area">
+            <div class="score-area">
+                <div class="get-score">
+                    <span class="get-score-pic"></span>
+                    <span class="get-score-num">0</span>
+                </div>
+                <div class="best-score">
+                    <span>BEST</span>
+                    <span class="best-score-num">0</span>
+                </div>
+            </div>
+            <!--经典模式-->
+            <div class="lost-area">
+                <span class="losts1"></span>
+                <span class="losts2"></span>
+                <span class="losts3"></span>
+            </div>
+            <!--限时模式-->
+            <div class="countdown"></div>
+            <!--街机模式-->
+            <div class="countdown"></div>
+        </div>
+        <!--功能区-->
+        <div class="func-area">
+            <!--退出-->
+            <div class="quit">
+                <div class="quit-cricle"></div>
+                <div class="quit-bomb"></div>
+            </div>
+            <!--经典模式-->
+            <div class="classic-mode">
+                <div class="classic-mode-cricle"></div>
+                <div class="classic-mode-fruit"></div>
+            </div>
+            <!--街机模式-->
+            <div class="arcade-mode">
+                <div class="arcade-mode-cricle"></div>
+                <div class="arcade-mode-fruit"></div>
+            </div>
+            <!--限时模式-->
+            <div class="time-mode">
+                <div class="time-mode-cricle"></div>
+                <div class="time-mode-fruit"></div>
+            </div>
+            <!--计分区-->
+            <div class="scoreboard">
+                <h2>最高得分</h2>
+                <p>经典模式：<span class="scoreboard-classic">0</span></p>
+                <p>限时模式：<span class="scoreboard-time">0</span></p>
+                <p>街机模式：<span class="scoreboard-arcade">0</span></p>
+            </div>
+        </div>
+        <!--水果容器-->
+        <div class="fruit-content"></div>
+        <!--其他容器-->
+        <div class="other-content"></div>
+        <canvas id="drawBoard" width="782" height="528">Your browser does not support the canvas element.</canvas>
+        <audio class="sound" src="sound/menu.mp3" autoplay="autoplay"></audio>
+    </div>
+</div>
+</body>
+</html>
+<script src="js/getElement.js"></script>
+<script src="js/tool.js"></script>
+<script src="js/classicMode.js"></script>
+<script src="js/timeMode.js"></script>
+<script src="js/arcadeMode.js"></script>
+<script src="js/main.js"></script>
