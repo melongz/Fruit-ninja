@@ -4,6 +4,6 @@
 
 clone下来，打开index.html即可
 
-![http://ovtelvx8j.bkt.clouddn.com/1.gif]()
+![image](http://ovtelvx8j.bkt.clouddn.com/1.gif)
 
-![http://ovtelvx8j.bkt.clouddn.com/2.gif]()
+![image](http://ovtelvx8j.bkt.clouddn.com/2.gif)
